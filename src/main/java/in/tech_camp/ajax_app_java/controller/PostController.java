@@ -37,8 +37,8 @@ public class PostController {
     post.setContent(form.getContent());
     postRepository.insert(post);
     PostEntity resultPost = postRepository.findById(post.getId());
+    System.out.println(resultPost);  // 削除
     return ResponseEntity.ok(resultPost);
-    return ResponseEntity.ok(post);
   }
   
 }
